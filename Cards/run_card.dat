@@ -137,7 +137,7 @@
   5.0 = etaj    ! max rap for the jets
   -1.0  = etab    ! max rap for the b
  2.5  = etaa    ! max rap for the photons
- 2.5  = etal    ! max rap for the charged leptons
+ 3.0  = etal    ! max rap for the charged leptons
  0.0  = etajmin ! min rap for the jets
  0.0  = etabmin ! min rap for the b
  0.0  = etaamin ! min rap for the photons
@@ -147,7 +147,7 @@
 #*********************************************************************
  0.4 = drjj    ! min distance between jets
  0.0   = drbb    ! min distance between b's
- 0.4 = drll    ! min distance between leptons
+ -1.0 = drll    ! min distance between leptons
  0.4 = draa    ! min distance between gammas
  0.0   = drbj    ! min distance between b and jet
  0.4 = draj    ! min distance between gamma and jet

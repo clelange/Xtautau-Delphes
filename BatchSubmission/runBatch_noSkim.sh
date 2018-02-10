@@ -16,10 +16,10 @@ BASEDIR="/afs/cern.ch/work/c/clange/SVFit/"
 MG5DIR="${BASEDIR}/MG5_aMC_v2_5_5"
 
 WORKDIR=${TMPDIR}
-STAGEOUTBASE=/eos/cms/store/cmst3/group/exovv/clange/Xtautau_skim
+STAGEOUTBASE=/eos/cms/store/cmst3/group/exovv/clange/Xtautau
 STAGEOUTDIR="${STAGEOUTBASE}/$MASS/$N"
 LOGOUTDIR="${BASEDIR}/logs/"
-SELECTIONSCRIPT="${BASEDIR}/Scripts/eventSelect.py"
+# SELECTIONSCRIPT="${BASEDIR}/Scripts/eventSelect.py"
 
 CARDDIR="$BASEDIR/Cards"
 CARDS="run pythia8 delphes options"
@@ -145,17 +145,17 @@ fi
 
 REPORTDIR=${LOGOUTDIR}/${MASS}
 
-cd $OUTDIR || exit
-cp $SELECTIONSCRIPT .
-SCRIPTNAME=`basename $SELECTIONSCRIPT`
-for j in `ls $FINALOUTFILES`; do
-    NEWOUTFILE=skim_`basename $j`
-    # echo ">>> running root -x -b \'$SCRIPTNAME (\"$j\",\"$NEWOUTFILE\")\'"
-    # root -x -b "$SCRIPTNAME (\"$j\",\"$NEWOUTFILE\")" >&2
-    echo ">>> running python $SCRIPTNAME $j $NEWOUTFILE"
-    python $SCRIPTNAME $j $NEWOUTFILE >&2
-    rm $j
-done
+# cd $OUTDIR || exit
+# cp $SELECTIONSCRIPT .
+# SCRIPTNAME=`basename $SELECTIONSCRIPT`
+# for j in `ls $FINALOUTFILES`; do
+#     NEWOUTFILE=skim_`basename $j`
+#     # echo ">>> running root -x -b \'$SCRIPTNAME (\"$j\",\"$NEWOUTFILE\")\'"
+#     # root -x -b "$SCRIPTNAME (\"$j\",\"$NEWOUTFILE\")" >&2
+#     echo ">>> running python $SCRIPTNAME $j $NEWOUTFILE"
+#     python $SCRIPTNAME $j $NEWOUTFILE >&2
+#     rm $j
+# done
 
 cd $WORKDIR || exit
 if test x"$REPORTDIR" != x; then
