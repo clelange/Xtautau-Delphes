@@ -10,7 +10,7 @@ cd Xtautau-Delphes
 cmsrel CMSSW_9_3_0_pre3
 ```
 
-Furthermore, install `LHAPDF` and `FastJet`.
+Furthermore, install `LHAPDF`, `FastJet`, and `Delphes`.
 
 There are a couple of hard-coded path names, e.g. `/afs/cern.ch/work/c/clange/SVFit/`, which needs to be adjusted to your `Xtautau-Delphes` working directory.
 
